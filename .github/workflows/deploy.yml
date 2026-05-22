@@ -40,5 +40,5 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-        heroku_app_name: "Recipe App"
+        heroku_app_name: "recipe-app-denys-module-2"
         heroku_email: "denis41391795@knu.ua"
