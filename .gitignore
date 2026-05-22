@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Django database
+db.sqlite3
+db.sqlite3-journal
+
+# Environment variables
+.env
+
+# Pytest and coverage (для майбутніх тестів)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and OS files
+.vscode/
+.idea/
+*.DS_Store
