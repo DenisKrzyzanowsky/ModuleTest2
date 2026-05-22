@@ -40,5 +40,5 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-        heroku_app_name: "your-placeholder-app-name"
-        heroku_email: "your-placeholder@email.com"
+        heroku_app_name: "Recipe App"
+        heroku_email: "denis41391795@knu.ua"
