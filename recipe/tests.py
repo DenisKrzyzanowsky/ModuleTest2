@@ -7,9 +7,7 @@ from .models import Recipe, Category
 class RecipeViewsTest(TestCase):
     def setUp(self):
         self.category = Category.objects.create(name="Test Category")
-        
-        # Створюємо рецепт і примусово встановлюємо дату за 2023 рік 
-        # (оскільки auto_now_add перезаписує дату при створенні)
+
         recipe_2023 = Recipe.objects.create(
             title="Recipe 2023",
             description="Desc",

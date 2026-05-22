@@ -15,7 +15,7 @@ db.sqlite3-journal
 # Environment variables
 .env
 
-# Pytest and coverage (для майбутніх тестів)
+# Pytest and coverage
 .pytest_cache/
 .coverage
 htmlcov/
