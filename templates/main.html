@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепти 2023 року</title>
+</head>
+<body>
+    <h1>Список рецептів за 2023 рік</h1>
+    
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipe_detail' id=recipe.id %}">{{ recipe.title }}</a> 
+                (Категорія: {{ recipe.category.name }})
+            </li>
+        {% empty %}
+            <li>За 2023 рік рецептів не знайдено.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
