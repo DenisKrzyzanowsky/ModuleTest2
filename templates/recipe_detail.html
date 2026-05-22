@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ recipe.title }}</title>
+</head>
+<body>
+    <h1>{{ recipe.title }}</h1>
+    
+    <p><strong>Категорія:</strong> {{ recipe.category.name }}</p>
+    <p><strong>Дата створення:</strong> {{ recipe.created_at|date:"d.m.Y H:i" }}</p>
+    
+    <h3>Опис:</h3>
+    <p>{{ recipe.description }}</p>
+
+    <h3>Інгредієнти:</h3>
+    <p>{{ recipe.ingredients|linebreaks }}</p>
+
+    <h3>Інструкція приготування:</h3>
+    <p>{{ recipe.instructions|linebreaks }}</p>
+
+    <br>
+    <a href="{% url 'main' %}">⬅ Повернутися до списку</a>
+</body>
+</html>
