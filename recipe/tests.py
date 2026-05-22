@@ -27,3 +27,13 @@ class RecipeViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'main.html')
         self.assertIn(self.recipe_2023, response.context['recipes'])
+
+    def test_recipe_detail_view_success(self):
+        response = self.client.get(reverse('recipe_detail', args=[self.recipe_2023.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipe_detail.html')
+        self.assertEqual(response.context['recipe'], self.recipe_2023)
+
+    def test_recipe_detail_view_404(self):
+        response = self.client.get(reverse('recipe_detail', args=[9999]))
+        self.assertEqual(response.status_code, 404)
